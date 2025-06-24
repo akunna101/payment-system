@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    
+    <nav>
+      <a href="./homepage.html"><h1 style="color: white;">Better<span>Pay.</span></h1></a>
+    </nav>
+
+    <main>    <!-- menu bar -->
+      <div class="menu-bar">
+    
+        <a href="./index.html"><div
+          style="
+            padding: 2rem 3rem;
+            display: grid;
+            justify-content: start;
+            align-items: center;
+            text-align: center;
+            color: white;
+        
+          "
+        >
+          <i class="fa-solid fa-table-columns"></i>
+          <p style="color: white;"> Dashboard</p>
+        </div></a>
+        <a href="./payment.html"><div
+          style="
+            padding: 2rem 3rem;
+            display: grid;
+            justify-content: start;
+            align-items: center;
+            text-align: center;
+            background-color: orange;
+            color: black;
+          "
+        >
+          <i class="fa-solid fa-money-bill-transfer"></i>
+          <p>Transfer</p>
+        </div></a>
+        <a href="./cards.html"><div
+          style="
+            padding: 2rem 3rem;
+            display: grid;
+            justify-content: start;
+            align-items: center;
+            text-align: center;
+            color: white;
+          "
+        >
+        <i class="fa-regular fa-credit-card"></i>
+          <p>Cards</p>
+        </div></a>
+        <div
+          style="
+            padding: 2rem 3rem;
+            display: grid;
+            justify-content: start;
+            align-items: center;
+            text-align: center;
+          "
+        >
+          <i class="fa-solid fa-headset"></i>
+          <p>Support</p>
+        </div>
+      </div>
+      <div class="transfer" style="padding: 1.2rem 2rem; width: 100%;">
+        <div class="transfer-header">
+          <h1>Transfer Money</h1>
+          <h2 id="balance-display">₦1,002,357.46</h2>
+        </div>
+       
+            <form class="form-input-transfer" id="transferForm"  action="required">
+              <label for="acctnum">Account Number:</label>
+                <input  type="text" id="acctnum" name="acctnum" maxlength="10" required>
+
+                <label for="acctname">Account Name:</label>
+                <input type="text" id="acctname" name="acctname" required>
+
+                <label for="bankname">Bank Name:</label>
+                <select name="bankname" id="bankname" required>
+                  <option value="">Select Bank</option>
+                  <option value="fidelity">Fidelity Bank</option>
+                  <option value="firstbank">First Bank</option>
+                  <option value="zenith">Zenith Bank</option>
+                  <option value="uba">United Bank of Africa</option>
+                  <option value="wema">WEMA</option>
+                  <option value="opay">Opay</option>
+                  <option value="kuda">Kuda</option>
+                </select>
+
+                <label for="amount">Amount:</label>
+                <input type="text" id="amount" name="amount" placeholder="₦: " required>
+
+                <label for="desc">Description:</label>
+                <input type="text" id="desc" name="desc">
+                
+            </form>
+            <button type="button" class="confirm" onclick="handleTransfer()">Confirm</button>
+        
+      </div>
+    </main>
+  </body>
+  <script src="./pay.js"></script>
+</html>

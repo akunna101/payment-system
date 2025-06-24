@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style></style>
+</head>
+<body>
+    <nav>
+        <a href="./homepage.html"><h1 style="color: white;">Better<span>Pay.</span></h1></a>
+      </nav>
+  
+      <main>    <!-- menu bar -->
+        <div class="menu-bar">
+      
+          <a href="./index.html"><div
+            style="
+              padding: 2rem 3rem;
+              display: grid;
+              justify-content: start;
+              align-items: center;
+              text-align: center;
+              color: white;
+          
+            "
+          >
+            <i class="fa-solid fa-table-columns"></i>
+            <p style="color: white;"> Dashboard</p>
+          </div></a>
+          <a href="./payment.html"><div
+            style="
+              padding: 2rem 3rem;
+              display: grid;
+              justify-content: start;
+              align-items: center;
+              text-align: center;
+              
+              color: white;
+            "
+          >
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            <p>Transfer</p>
+          </div></a>
+          <a href="./cards.html"><div
+            style="
+              padding: 2rem 3rem;
+              display: grid;
+              justify-content: start;
+              align-items: center;
+              text-align: center;
+              color: black;
+              background-color: orange;
+            "
+          >
+          <i class="fa-regular fa-credit-card"></i>
+            <p>Cards</p>
+          </div></a>
+          <div
+            style="
+              padding: 2rem 3rem;
+              display: grid;
+              justify-content: start;
+              align-items: center;
+              text-align: center;
+            "
+          >
+            <i class="fa-solid fa-headset"></i>
+            <p>Support</p>
+          </div>
+        </div>
+
+        <!-- flip card display --> 
+        <div class="credit-container">
+          <div class="credit-card">
+            <div class="inner-card">
+              
+              <!-- FRONT -->
+              <div class="front-card">
+                <img src="./images/map.png" class="map-img">
+                <div class="row">
+                  <img src="./images/chip.png" width="60px">
+                  <img src="./images/visa.png" width="80px">
+                </div>
+                <div class="row card-num">
+                  <p>5455</p>
+                  <p>0478</p>
+                  <p>7786</p>
+                  <p>2420</p>
+                </div>
+                <div class="row card-holder">
+                  <p>CARD HOLDER</p>
+                  <p>VALID TILL</p>
+                </div>
+                <div class="row-name">
+                  <p>RAPHAEL AKUNNA <span style="margin-left: 174px; display: inline-block; color: white;">16/26</span></p>
+                </div>
+                <div style="display: inline-block;margin-left: 170px;margin-bottom: -15px;">
+                <h3>Better<span>Pay.</span></h3>
+              </div>
+              </div>
+              
+              <!-- BACK -->
+              <div class="back-card">
+                <img src="./images/map.png" class="map-img">
+                <div class="bar"></div>
+                <div class="row-back">
+                  <div>
+                    <img src="./images/pattern.png">
+                    <p>811</p>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+          <div class="card-details">
+            <form class="info">
+              <fieldset >
+                <legend>Card Information:</legend>
+                <label for="card-name">Cardholder's Name</label>
+                <input type="" id="card-name" name="card-name" placeholder="Raphael Akunna" >
+                <label for="card-numb">Card Number</label>
+                <input type="" id="card-numb" name="card-numb" placeholder="5455047877862420" >
+                <label for="expiry">Expiry Date</label>
+                <input type="" id="expiry" name="expiry" placeholder="16/26" >
+                <label for="cvv">CVV</label>
+                <input type="" id="cvv" name="cvv" placeholder="811" >
+              
+              </fieldset>
+            </form>
+           </div>   
+        </div>
+     
+</main>
+</body>
+</html>
