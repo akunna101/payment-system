@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="payment.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -69,53 +69,97 @@
             justify-content: start;
             align-items: center;
             text-align: center;
+            color: white;
           "
         >
         <i class="fa-solid fa-headset"></i>
           <p>Support</p>
         </div>
       </div>
-      <div class="dashboard">
-        <div class="header">
-          <h1>Welcome back, Raphael</h1>
+      
+      <div class="content-area">
+        <!-- Dashboard View -->
+        <div id="dashboard" class="dashboard">
+          <div class="header">
+            <h1>Welcome back, <span id="user-name">Raphael</span></h1>
+          </div>
+          
+          <div class="success-message" id="success-message">
+            Transfer completed successfully!
+          </div>
+      
+          <div class="cards">
+            <div class="card">
+              <h3>Account Balance</h3>
+              <p id="account-balance">₦1,002,357.46</p>
+            </div>
+            <div class="card">
+              <h3>Account Number</h3>
+              <p id="account-number">0244578909</p>
+            </div>
+            <div class="card">
+              <h3>Account Type</h3>
+              <p id="account-type">Current</p>
+            </div>
+          </div>
+      
+          <div class="transactions">
+            <h2>Recent Transactions</h2>
+            <div id="transactions-container">
+              <div class="transaction-item">
+                <span class="transaction-description">Spotify Subscription</span>
+                <span class="transaction-amount negative">- ₦5.80</span>
+              </div>
+              <div class="transaction-item">
+                <span class="transaction-description">Salary Deposit</span>
+                <span class="transaction-amount">+ ₦2,500.00</span>
+              </div>
+              <div class="transaction-item">
+                <span class="transaction-description">Electric Bill</span>
+                <span class="transaction-amount negative">- ₦120.75</span>
+              </div>
+              <div class="transaction-item">
+                <span class="transaction-description">Netflix Subscription</span>
+                <span class="transaction-amount negative">- ₦15.99</span>
+              </div>
+            </div>
+          </div>
         </div>
-    
-        <div class="cards">
-          <div class="card">
-            <h3>Account Balance</h3>
-            <p>₦1,002,357.46</p>
-          </div>
-          <div class="card">
-            <h3>Account Number</h3>
-            <p>0244578909</p>
-          </div>
-          <div class="card">
-            <h3>Account Type</h3>
-            <p>Current</p>
-          </div>
-        </div>
-    
-        <div class="transactions">
-          <h2>Recent Transactions</h2>
-          <div class="transaction-item">
-            <span class="transaction-description">Spotify Subscription</span>
-            <span class="transaction-amount negative">- ₦5.80</span>
-          </div>
-          <div class="transaction-item">
-            <span class="transaction-description">Salary Deposit</span>
-            <span class="transaction-amount">+ ₦2,500.00</span>
-          </div>
-          <div class="transaction-item">
-            <span class="transaction-description">Electric Bill</span>
-            <span class="transaction-amount negative">- ₦120.75</span>
-          </div>
-          <div class="transaction-item">
-            <span class="transaction-description">Netflix Subscription</span>
-            <span class="transaction-amount negative">- ₦15.99</span>
-          </div>
-        </div>
-      </div>
-    
     </main>
+    <!-- <script>
+      window.addEventListener("DOMContentLoaded", () => {
+  const data = JSON.parse(localStorage.getItem("accountData"));
+
+  document.getElementById("user-name").textContent = data.name;
+  document.getElementById("account-balance").textContent = `₦${data.balance.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
+  document.getElementById("account-number").textContent = data.number;
+  document.getElementById("account-type").textContent = data.type;
+
+  const container = document.getElementById("transactions-container");
+  container.innerHTML = "";
+
+  data.transactions.forEach((tx) => {
+    const item = document.createElement("div");
+    item.className = "transaction-item";
+
+    const desc = document.createElement("span");
+    desc.className = "transaction-description";
+    desc.textContent = tx.description;
+
+    const amt = document.createElement("span");
+    amt.className = "transaction-amount";
+    if (tx.amount < 0) {
+      amt.classList.add("negative");
+    }
+    amt.textContent = `${tx.amount < 0 ? "-" : "+"} ₦${Math.abs(tx.amount).toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
+
+    item.appendChild(desc);
+    item.appendChild(amt);
+    container.appendChild(item);
+  });
+});
+
+    </script> -->
+    <script src="./pay.js"></script>
   </body>
 </html>
